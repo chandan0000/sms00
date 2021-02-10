@@ -78,7 +78,7 @@ def main():
             print('\033[1;93mInvalid phone number or bad request. Exiting...\033[0m')
             sys.exit()
         else:
-            print('Message %d not sent, trying again...' % counter)
+            print('Message %d not sent, trying once again...' % counter)
         time.sleep(1)
 
 
