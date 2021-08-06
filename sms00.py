@@ -2,6 +2,7 @@
 # v1.0 by @linux_choice
 # https://github.com/thelinuxchoice/smsbomber
 # be original, do not copy this code!
+# Hiii
 
 import requests
 from random import randint
