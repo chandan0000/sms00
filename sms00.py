@@ -59,14 +59,17 @@ def main():
         r1 = randint(0, 999)
         r2 = randint(100, 9999)
 
-        post_req = sess.post('https://textbelt.com/otp/generate', headers={'user-agent': user_agent}, data={
+        post_req = sess.post(
+            'https://textbelt.com/otp/generate',
+            headers={'user-agent': user_agent},
+            data={
+                'phone': f'{phone}',
+                'userid': f'myuser{r1}@site{r2}.com',
+                'message': f'{message}',
+                'key': 'textbelt',
+            },
+        )
 
-            'phone': '%s' % phone,
-            'userid': 'myuser{}@site{}.com'.format(r1, r2),
-            'message': '%s' % message,
-            'key': 'textbelt'
-
-        })
 
         # print(post_req.text) #debug
 
